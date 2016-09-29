@@ -5,22 +5,19 @@ import com.orcatrak.collection.ZipCodesCollection;
 @USA
 public class ZipCodeChecker {
 
-    private Integer zipCode;
+    private String zipCode;
     ZipCodesCollection zipCodesCollection = new ZipCodesCollection();
-    
-    public ZipCodeChecker() { 
+
+    public ZipCodeChecker() {
     }
 
-    public ZipCodeChecker(Integer zipCode) {
+    public ZipCodeChecker(String zipCode) {
         this.zipCode = zipCode;
     }
 
-    public boolean isZipCodeValid(Integer zipCode) {
+    public boolean isZipCodeValid(String zipCode) {
         // Call an external web service to check zipcode
-        if (zipCodesCollection.getZipCodes().containsKey(zipCode)) {
-            return true;
-        }
-        return false;
+        return (zipCodesCollection.getZipCodes().containsKey(zipCode));
     }
 }
 

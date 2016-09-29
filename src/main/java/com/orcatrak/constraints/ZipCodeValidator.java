@@ -15,24 +15,24 @@ import javax.validation.ConstraintValidatorContext;
  * 
  *         --
  */
-public class ZipCodeValidator implements ConstraintValidator<ZipCode, Integer> {
+public class ZipCodeValidator implements ConstraintValidator<ZipCode, String> {
 
     @Inject
     @USA
     private ZipCodeChecker checker;
-    private Pattern zipPattern = Pattern.compile("\\d{5}(-\\d{5})?");
+    private final Pattern zipPattern = Pattern.compile("\\d{5}(-\\d{5})?");
 
     @Override
     public void initialize(ZipCode zipCode) {
     }
 
     @Override
-    public boolean isValid(Integer value, ConstraintValidatorContext context) {
+    public boolean isValid(String value, ConstraintValidatorContext context) {
         if (value == null) {
             return true;
         }
 
-        Matcher m = zipPattern.matcher(String.valueOf(value));
+        Matcher m = zipPattern.matcher(value);
         if (!m.matches()) {
             return false;
         }

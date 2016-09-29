@@ -15,16 +15,16 @@ import javax.validation.constraints.Size;
  *
  * @author java ee
  */
-@Entity
+//@Entity
 @Table(name = "CUSTOMER")
 public class Customer implements Serializable {
 
     @Column(name = "PICTURE")
     protected Byte[] picture; //use byte because integer is 32bits & 1byte is 8bits; useful when reading stream of bits i.e pics; 1 char is 1 byte or 8 bits. machines reads bytes
 
-    @Id
-    @GeneratedValue
-    @Column(name = "CUSTOMER_ID")
+//    @Id
+//    @GeneratedValue
+//    @Column(name = "CUSTOMER_ID")
     protected Long customerId;
 
     @NotNull(message = "Enter a valid first name. Must be between {min} and {max} characters")
@@ -32,19 +32,17 @@ public class Customer implements Serializable {
 
     @NotNull(message = "Enter a valid last name.  Must be between {min} and {max} characters")
     protected String lastName;
-    
+
 //    @Min(value = 18, message = "customer too young")
 //    protected int age;
-
 //    @Phone
     protected String telephone;
 
     @Email
     protected String email;
-    
+
     @Email(message = "recovery email is invalid")
     protected String recoveryEmail;
-
 
 //    @Phone
     protected String fax;
@@ -65,8 +63,9 @@ public class Customer implements Serializable {
     public Customer() {
     }
 
-    public Customer(Long customerId, String firstName, String telephone, String email, String streetAddress, String city, String state, String zip) {
+    public Customer(Long customerId, String firstName, String lastName, String telephone, String email, String streetAddress, String city, String state, String zip) {
         this.firstName = firstName;
+        this.lastName = lastName;
         this.telephone = telephone;
         this.email = email;
         this.streetAddress = streetAddress;
@@ -130,7 +129,7 @@ public class Customer implements Serializable {
     public void setRecoveryEmail(String recoveryEmail) {
         this.recoveryEmail = recoveryEmail;
     }
-    
+
     public String getFax() {
         return fax;
     }
