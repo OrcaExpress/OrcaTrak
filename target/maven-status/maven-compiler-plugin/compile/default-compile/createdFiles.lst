@@ -1,0 +1,5 @@
+com\orcatrak\constraints\ZipCode.class
+incomplete\Zone.class
+com\orcatrak\constraints\NotEmpty.class
+incomplete\Address.class
+com\orcatrak\constraints\ZipCode$List.class
