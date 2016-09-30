@@ -1,6 +1,6 @@
 package incomplete;
 
-import com.orcatrak.persistence.Customer;
+import com.orcatrak.persistence.Client;
 import java.io.Serializable;
 
 /**
@@ -9,7 +9,7 @@ import java.io.Serializable;
  */
 
 public class Order implements Serializable {
-    private Customer customer;
+    private Client customer;
     private Item item;
     private ShippingCost shippingCost;
     private Billing billing;

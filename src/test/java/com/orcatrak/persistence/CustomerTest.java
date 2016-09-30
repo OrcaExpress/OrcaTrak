@@ -37,15 +37,15 @@ public class CustomerTest {
 
     @Test
     public void shouldRaiseNoConstraintViolation() {
-        Customer customer = new Customer(111L, "john", "kusak", "2148029284", "jsfsessions@gmail.com", "1114 fairfield drv", "dallas", "tx", "75247");
-        Set<ConstraintViolation<Customer>> violations = validator.validate(customer);
+        Client customer = new Client(111L, "john", "kusak", "2148029284", "jsfsessions@gmail.com", "1114 fairfield drv", "dallas", "tx", "75247");
+        Set<ConstraintViolation<Client>> violations = validator.validate(customer);
         assertEquals(0, violations.size());
     }
     
     @Test
     public void shouldRaiseConstraintViolationCauseInvalidZipcode() { 
-        Customer customer = new Customer(111L, "john", "kusak", "2148029284", "jsfsessions@gmail.com", "1114 fairfield drv", "dallas", "tx", "75000");
-        Set<ConstraintViolation<Customer>> violations = validator.validate(customer);
+        Client customer = new Client(111L, "john", "kusak", "2148029284", "jsfsessions@gmail.com", "1114 fairfield drv", "dallas", "tx", "75000");
+        Set<ConstraintViolation<Client>> violations = validator.validate(customer);
         assertEquals(1, violations.size());
         assertEquals("invalid US zip code", violations.iterator().next().getMessage());
         assertEquals("", violations.iterator().next().getInvalidValue());

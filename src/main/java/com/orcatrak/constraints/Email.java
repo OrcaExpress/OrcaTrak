@@ -20,7 +20,7 @@ import static java.lang.annotation.ElementType.*;
  *         --
  */
 @NotNull
-@Size(min = 2)
+@Size(min = 7)
 @Pattern(regexp = "[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\."
         + "[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*"
         + "@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?")

@@ -1,5 +1,6 @@
 package incomplete;
 
+import com.orcatrak.persistence.Address;
 import java.io.Serializable;
 
 /**
