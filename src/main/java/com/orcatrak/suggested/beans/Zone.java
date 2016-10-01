@@ -1,4 +1,4 @@
-package incomplete;
+package com.orcatrak.suggested.beans;
 
 /**
  *

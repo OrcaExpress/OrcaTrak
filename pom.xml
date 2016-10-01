@@ -19,14 +19,36 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
-    <dependencies>
+    <dependencies>  
+        <!--from https://docs.jboss.org/hibernate/validator/5.3/reference/en-US/html_single/-->    
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-validator</artifactId>
+            <version>5.3.0.CR1</version>
+        </dependency> 
+        <dependency>
+            <groupId>javax.el</groupId>
+            <artifactId>javax.el-api</artifactId>
+            <version>2.2.4</version>
+        </dependency>
+        <dependency>
+            <groupId>org.glassfish</groupId>
+            <artifactId>javax.el</artifactId>
+            <version>3.0.1-b08</version>
+        </dependency>         
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-validator-cdi</artifactId>
+            <version>5.3.0.CR1</version>
+        </dependency>
+        <!--from https://docs.jboss.org/hibernate/validator/5.3/reference/en-US/html_single/-->              
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.12</version>
             <scope>test</scope>
             <type>jar</type>
-        </dependency>
+        </dependency>        
         <dependency>
             <groupId>javax</groupId>
             <artifactId>javaee-api</artifactId>

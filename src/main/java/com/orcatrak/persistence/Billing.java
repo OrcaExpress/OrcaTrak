@@ -1,7 +1,8 @@
-package incomplete;
+package com.orcatrak.persistence;
 
-import com.orcatrak.persistence.Address;
 import java.io.Serializable;
+import javax.persistence.Entity;
+import org.hibernate.validator.constraints.CreditCardNumber;
 
 /**
  * Billing information
@@ -16,6 +17,7 @@ public class Billing implements Serializable {
     /**
      * Account number
      */
+    @CreditCardNumber
     protected String accountNumber;
 
     /**

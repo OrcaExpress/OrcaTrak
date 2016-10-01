@@ -1,6 +1,5 @@
 package com.orcatrak.persistence;
 
-import com.orcatrak.constraints.ZipCode;
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
 
@@ -11,9 +10,15 @@ import javax.persistence.Embeddable;
 public class Address implements java.io.Serializable {
 
     protected String streetAddress;
+    
     protected String city;
+    
+    @Column(name = "STATE_CODE")
     protected String state;
+    
+    @Column(name = "ZIP_CODE")
     protected String zipCode;
+    
     protected String country;
 
     /**
@@ -38,7 +43,6 @@ public class Address implements java.io.Serializable {
         this.streetAddress = streetAddress;
     }
 
-    @City
     public String getCity() {
         return city;
     }
@@ -47,8 +51,6 @@ public class Address implements java.io.Serializable {
         this.city = city;
     }
 
-    @State
-    @Column(name = "STATE_CODE")
     public String getState() {
         return state;
     }
@@ -57,8 +59,6 @@ public class Address implements java.io.Serializable {
         this.state = state;
     }
 
-    @ZipCode
-    @Column(name = "ZIP_CODE")
     public String getZipCode() {
         return zipCode;
     }
@@ -71,15 +71,6 @@ public class Address implements java.io.Serializable {
         return country;
     }
 
-    /**
-     * Constructor
-     *
-     * @param streetAddress
-     * @param city - city
-     * @param state - state
-     * @param zipCode - zip code
-     * @param country - country
-     */
     public void setCountry(String country) {
         this.country = country;
     }

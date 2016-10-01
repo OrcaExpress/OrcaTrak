@@ -1,6 +1,5 @@
 package com.orcatrak.persistence;
 
-import com.orcatrak.constraints.Email;
 import java.io.Serializable;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -8,23 +7,42 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
+import org.hibernate.validator.constraints.Email;
 
 /**
  *
- * @author java ee
+ * @author java ee  
+ *
  */
+
 //@Entity
 @Table(name = "CLIENT")
 public class Client implements Serializable {
 
+    @Column(name = "PICTURE")
     protected Byte[] picture; //use byte because integer is 32bits & 1byte is 8bits; useful when reading stream of bits i.e pics; 1 char is 1 byte or 8 bits. machines reads bytes
+
+    @Id
+    @GeneratedValue
+    @Column(name = "CLIENT_ID")
     protected Long clientId;
+
+    @NotNull(message = "Enter a valid first name. Must be between {min} and {max} characters")
     protected String firstName;
+
+    @NotNull(message = "Enter a valid last name.  Must be between {min} and {max} characters")
     protected String lastName;
+
     protected String telephone;
+
+    @Email
     protected String email;
+
+    @Email(message = "recovery email is invalid")
     protected String recoveryEmail;
+
     protected String fax;
+
     protected Address address;
 
     public Client() {
@@ -37,7 +55,6 @@ public class Client implements Serializable {
         this.email = email;
     }
 
-    @Column(name = "PICTURE")
     public Byte[] getPicture() {
         return picture;
     }
@@ -46,9 +63,6 @@ public class Client implements Serializable {
         this.picture = picture;
     }
 
-    @Id
-    @GeneratedValue
-    @Column(name = "CLIENT_ID")
     public Long getClientId() {
         return clientId;
     }
@@ -57,7 +71,6 @@ public class Client implements Serializable {
         this.clientId = clientId;
     }
 
-    @NotNull(message = "Enter a valid first name. Must be between {min} and {max} characters")
     public String getFirstName() {
         return firstName;
     }
@@ -66,7 +79,6 @@ public class Client implements Serializable {
         this.firstName = firstName;
     }
 
-    @NotNull(message = "Enter a valid last name.  Must be between {min} and {max} characters")
     public String getLastName() {
         return lastName;
     }
@@ -75,7 +87,6 @@ public class Client implements Serializable {
         this.lastName = lastName;
     }
 
-    //    @Phone
     public String getTelephone() {
         return telephone;
     }
@@ -84,7 +95,6 @@ public class Client implements Serializable {
         this.telephone = telephone;
     }
 
-    @Email
     public String getEmail() {
         return email;
     }
@@ -93,7 +103,6 @@ public class Client implements Serializable {
         this.email = email;
     }
 
-    @Email(message = "recovery email is invalid")
     public String getRecoveryEmail() {
         return recoveryEmail;
     }
@@ -102,7 +111,6 @@ public class Client implements Serializable {
         this.recoveryEmail = recoveryEmail;
     }
 
-//    @Phone
     public String getFax() {
         return fax;
     }
@@ -110,5 +118,4 @@ public class Client implements Serializable {
     public void setFax(String fax) {
         this.fax = fax;
     }
-
 }
