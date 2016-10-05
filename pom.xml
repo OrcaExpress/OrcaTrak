@@ -20,7 +20,7 @@
     </properties>
 
     <dependencies>  
-        <!--from https://docs.jboss.org/hibernate/validator/5.3/reference/en-US/html_single/-->    
+        <!--from JSR349 Reference Implementation https://docs.jboss.org/hibernate/validator/5.3/reference/en-US/html_single/-->    
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-validator</artifactId>
@@ -32,16 +32,23 @@
             <version>2.2.4</version>
         </dependency>
         <dependency>
+            <groupId>org.glassfish.web</groupId>
+            <artifactId>javax.el</artifactId>
+            <version>2.2.4</version>
+        </dependency>
+         <!-- use the above or the below 
+        <dependency>
             <groupId>org.glassfish</groupId>
             <artifactId>javax.el</artifactId>
             <version>3.0.1-b08</version>
-        </dependency>         
+        </dependency>  
+        -->       
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-validator-cdi</artifactId>
             <version>5.3.0.CR1</version>
         </dependency>
-        <!--from https://docs.jboss.org/hibernate/validator/5.3/reference/en-US/html_single/-->              
+        <!--from from JSR349 Reference Implementation https://docs.jboss.org/hibernate/validator/5.3/reference/en-US/html_single/-->              
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>

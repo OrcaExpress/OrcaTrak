@@ -1,13 +1,12 @@
 com\orcatrak\buslogic\UserServiceBean.class
-incomplete\ShippingCost.class
 com\orcatrak\buslogic\ItemService.class
 com\orcatrak\persistence\Client.class
+com\orcatrak\suggested\beans\Zone.class
 com\orcatrak\buslogic\BillingException.class
 com\orcatrak\buslogic\QuoteServiceBean.class
 com\orcatrak\persistence\Address.class
 com\orcatrak\persistence\Billing.class
 com\orcatrak\persistence\Item.class
-incomplete\EmailNotifications.class
 com\orcatrak\buslogic\ItemServiceBean.class
 com\orcatrak\buslogic\OrderProcessor.class
 com\orcatrak\persistence\OrderStatus.class
@@ -15,8 +14,8 @@ com\orcatrak\persistence\Shipping.class
 com\orcatrak\persistence\User.class
 com\orcatrak\buslogic\OrderProcessorBean.class
 com\orcatrak\buslogic\UserService.class
-incomplete\Zone.class
+com\orcatrak\suggested\beans\EmailNotifications.class
 com\orcatrak\persistence\Order.class
 com\orcatrak\buslogic\QuoteService.class
 com\orcatrak\persistence\Quote.class
-incomplete\PickupDeliveryRequirements.class
+com\orcatrak\suggested\beans\PickupDeliveryRequirements.class

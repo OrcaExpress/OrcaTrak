@@ -1,4 +1,4 @@
-package com.orcatrak.buslogic;
+package com.orcatrak.legacy;
 
 /**
  * after a quote for a shipping is performed the order is processed once client approves it

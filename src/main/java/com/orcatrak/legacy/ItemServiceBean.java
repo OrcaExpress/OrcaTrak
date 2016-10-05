@@ -1,4 +1,4 @@
-package com.orcatrak.buslogic;
+package com.orcatrak.legacy;
 
 import com.orcatrak.persistence.Item;
 import javax.ejb.Stateless;

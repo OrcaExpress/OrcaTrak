@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: com.orcatrak.persistence.CustomerTest
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.435 sec <<< FAILURE! - in com.orcatrak.persistence.CustomerTest
-shouldRaiseConstraintViolationCauseInvalidZipcode(com.orcatrak.persistence.CustomerTest)  Time elapsed: 0.126 sec  <<< FAILURE!
+Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.469 sec <<< FAILURE! - in com.orcatrak.persistence.CustomerTest
+shouldRaiseConstraintViolationCauseInvalidZipcode(com.orcatrak.persistence.CustomerTest)  Time elapsed: 0.188 sec  <<< FAILURE!
 java.lang.AssertionError: expected:<1> but was:<0>
 	at com.orcatrak.persistence.CustomerTest.shouldRaiseConstraintViolationCauseInvalidZipcode(CustomerTest.java:49)
 
