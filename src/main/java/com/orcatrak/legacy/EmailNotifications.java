@@ -3,15 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.orcatrak.suggested.beans;
+package com.orcatrak.legacy;
 
 /**
  *
  * @author java ee
  */
-public enum PickupDeliveryRequirements {
-    LIFTGATE, 
-    INSIDE_PICKUP, 
-    NOTIFY_PRIOR_TO_ARRIVAL,
-    INSIDE_DELIVERY
+//does the client want notifications sent to email on any of the following 
+public enum EmailNotifications {
+    DISPATCHED,
+    PICKEDUP,
+    ENROUTE,
+    DELIVERED
 }
